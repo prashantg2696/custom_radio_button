@@ -8,7 +8,7 @@
         android:id="@+id/genderRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:checkedButton="@id/male"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,13 +21,13 @@
             android:layout_height="90dp"
             android:background="@drawable/gender_background_selector"
             android:button="@android:color/transparent"
-            android:buttonTint="@color/gender_text_selector"
             android:drawableTop="@drawable/ic_male"
             android:padding="16dp"
             android:text="@string/male"
             android:textAlignment="center"
             android:textColor="@color/gender_text_selector"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:drawableTint="@color/gender_text_selector" />
 
         <RadioButton
             android:id="@+id/female"
@@ -36,13 +36,13 @@
             android:layout_marginStart="16dp"
             android:background="@drawable/gender_background_selector"
             android:button="@android:color/transparent"
-            android:buttonTint="@color/gender_text_selector"
             android:drawableTop="@drawable/ic_female"
             android:padding="16dp"
             android:text="@string/female"
             android:textAlignment="center"
             android:textColor="@color/gender_text_selector"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:drawableTint="@color/gender_text_selector" />
 
     </RadioGroup>
 
@@ -50,7 +50,7 @@
         android:id="@+id/acceptDeclineRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:checkedButton="@id/accept"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,32 +59,74 @@
 
         <RadioButton
             android:id="@+id/accept"
-            android:layout_width="150dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:background="@drawable/accept_background_selector"
             android:button="@android:color/transparent"
-            app:drawableTint="@color/accept_text_selector"
-            android:drawableStart="@drawable/ic_accept"
+            android:drawableEnd="@drawable/ic_accept"
             android:padding="16dp"
             android:text="@string/accept"
             android:textAlignment="center"
             android:textColor="@color/accept_text_selector"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:drawableTint="@color/accept_text_selector" />
 
         <RadioButton
             android:id="@+id/decline"
-            android:layout_width="150dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:background="@drawable/decline_background_selector"
             android:button="@android:color/transparent"
-            app:drawableTint="@color/decline_text_selector"
-            android:drawableStart="@drawable/ic_decline"
+            android:drawableEnd="@drawable/ic_decline"
             android:padding="16dp"
             android:text="@string/decline"
             android:textAlignment="center"
             android:textColor="@color/decline_text_selector"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:drawableTint="@color/decline_text_selector" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/sortByRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:checkedButton="@id/like"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/acceptDeclineRadioGroup">
+
+        <RadioButton
+            android:id="@+id/like"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/like_dislike_background_selector"
+            android:button="@android:color/transparent"
+            android:drawableStart="@drawable/ic_like"
+            android:padding="16dp"
+            android:text="@string/like"
+            android:textAlignment="center"
+            android:textColor="@color/like_dislike_text_selector"
+            android:textSize="16sp"
+            app:drawableTint="@color/like_dislike_text_selector" />
+
+        <RadioButton
+            android:id="@+id/dislike"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/like_dislike_background_selector"
+            android:button="@android:color/transparent"
+            android:drawableStart="@drawable/ic_dislike"
+            android:padding="16dp"
+            android:text="@string/dislike"
+            android:textAlignment="center"
+            android:textColor="@color/like_dislike_text_selector"
+            android:textSize="16sp"
+            app:drawableTint="@color/like_dislike_text_selector" />
 
     </RadioGroup>
 
